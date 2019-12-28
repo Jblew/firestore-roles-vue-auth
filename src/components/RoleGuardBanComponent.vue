@@ -55,6 +55,7 @@
 import Vue from 'vue';
 import { FirestoreRolesAdapter } from '../adapter';
 import { getInjectedRolesAdapter, rolesAdapterInjectionSpread } from '../rolesAdapterInjection';
+import LoadingIndicator from './LoadingIndicator.vue';
 
 export default Vue.extend({
   ...rolesAdapterInjectionSpread,
@@ -94,6 +95,9 @@ export default Vue.extend({
     checkRole() {
       this.$emit('checkRole');
     },
+  },
+  components: {
+    LoadingIndicator,
   },
 });
 </script>
