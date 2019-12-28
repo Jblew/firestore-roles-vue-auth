@@ -7,7 +7,7 @@ import {
   RolesAuthModuleImpl,
 } from 'firestore-roles-vuex-module';
 import { Module as VuexModule } from 'vuex';
-import { Config } from '@/Config';
+import { Config } from '../Config';
 
 export class FirestoreRolesAdapter {
     public static INJECTION_KEY = 'rolesAdapterInjectionKey';

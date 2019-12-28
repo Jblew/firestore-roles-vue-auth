@@ -1,4 +1,4 @@
-import { FirestoreRolesAdapter } from '@/adapter';
+import { FirestoreRolesAdapter } from './adapter';
 
 export const rolesAdapterInjectionSpread = {
   inject: [FirestoreRolesAdapter.INJECTION_KEY],

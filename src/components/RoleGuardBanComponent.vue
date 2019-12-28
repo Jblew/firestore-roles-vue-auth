@@ -53,7 +53,7 @@
 <script lang="ts">
 // tslint:disable no-console
 import Vue from 'vue';
-import { FirestoreRolesAdapter } from '@/adapter';
+import { FirestoreRolesAdapter } from '../adapter';
 import { getInjectedRolesAdapter, rolesAdapterInjectionSpread } from '../rolesAdapterInjection';
 
 export default Vue.extend({
