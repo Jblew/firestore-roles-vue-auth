@@ -1,6 +1,6 @@
 // tslint:disable member-ordering
 import firebase from 'firebase/app';
-import FirestoreRoles, { FirestoreRolesConfiguration } from 'firestore-roles';
+import FirestoreRoles from 'firestore-roles';
 import {
   Configuration as RolesAuthConfiguration,
   RolesAuthModule,
@@ -10,7 +10,7 @@ import { Module as VuexModule } from 'vuex';
 import { Config } from '../Config';
 
 export class FirestoreRolesAdapter {
-    public static INJECTION_KEY = 'rolesAdapterInjectionKey';
+    public static INJECTION_KEY = 'firestoreRolesAdapter';
 
     private firestoreRoles: FirestoreRoles;
 
