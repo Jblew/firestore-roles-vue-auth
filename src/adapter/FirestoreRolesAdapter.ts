@@ -16,7 +16,7 @@ export class FirestoreRolesAdapter {
 
     private availableRoles: string[];
 
-    private constructor(private config: Config) {
+    public constructor(private config: Config) {
       this.firestoreRoles = new FirestoreRoles(config.rolesConfig, config.firestore);
       this.availableRoles = Object.keys(config.rolesConfig.roles);
     }
