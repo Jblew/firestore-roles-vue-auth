@@ -1,12 +1,16 @@
 {
     "name": "firestore-roles-vue-auth",
-    "version": "0.1.0",
-    "private": true,
+    "description": "Vue auth module for Jblew/firestore-roles system",
+    "version": "0.0.0-development",
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint"
     },
+    "files": [
+        "/src",
+        "package-lock.js"
+    ],
     "dependencies": {},
     "peerDependencies": {
         "firestore-roles-vuex-module": "2.x",
@@ -45,5 +49,18 @@
             "vue-cli-service lint",
             "git add"
         ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Jblew/firestore-roles-vue-auth"
+    },
+    "keywords": [
+        "vue",
+        "firestore"
+    ],
+    "author": "Jędrzej Lewandowski <jedrzejblew@gmail.com> (https://jedrzej.lewandowski.doctor/)",
+    "license": "GPL-3.0-OR-LATER",
+    "bugs": {
+        "url": "https://github.com/Jblew/firestore-roles-vue-auth/issues"
     }
 }
