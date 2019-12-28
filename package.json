@@ -7,20 +7,32 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "dependencies": {
-    "vue": "^2.6.10"
+  "dependencies": {},
+  "peerDependencies": {
+    "firestore-roles-vuex-module": "2.x",
+    "vue": "2.x",
+    "vuex": "3.x",
+    "firebase": "^7.x",
+    "firebaseui": "4.x",
+    "firestore-roles": "2.x"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^4.1.0",
     "@vue/cli-plugin-typescript": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
-    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-airbnb": "^4.0.1",
     "@vue/eslint-config-typescript": "^4.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "firebase": "^7.6.1",
+    "firebaseui": "^4.4.0",
+    "firestore-roles": "^2.3.2",
+    "firestore-roles-vuex-module": "^2.6.0",
     "lint-staged": "^9.5.0",
     "typescript": "~3.5.3",
-    "vue-template-compiler": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.1.2"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
