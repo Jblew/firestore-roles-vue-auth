@@ -50,6 +50,9 @@
             "git add"
         ]
     },
+    "release": {
+        "branch": "release"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/Jblew/firestore-roles-vue-auth"
