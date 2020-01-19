@@ -13,7 +13,7 @@
 
     <v-card-text v-if="loading">
       <p class="text-center">
-        <LoadingIndicator />
+        <LoadingComponent></LoadingComponent>
       </p>
       <p>{{ text.checkingIfSufficientRole }}</p>
     </v-card-text>
@@ -25,7 +25,7 @@
         }}</v-btn>
       </p>
       <p class="text-center" v-if="requestLoading">
-        <LoadingIndicator />
+        <LoadingComponent></LoadingComponent>
       </p>
       <p v-if="requestError.length > 0">
         <v-alert type="error">{{ requestError }}</v-alert>
@@ -55,7 +55,7 @@
 import Vue from 'vue';
 import { FirestoreRolesAdapter } from '../adapter';
 import { getInjectedRolesAdapter, rolesAdapterInjectionSpread } from '../rolesAdapterInjection';
-import LoadingIndicator from './LoadingIndicator.vue';
+import LoadingComponent from './LoadingComponent.vue';
 
 export default Vue.extend({
   ...rolesAdapterInjectionSpread,
@@ -97,7 +97,7 @@ export default Vue.extend({
     },
   },
   components: {
-    LoadingIndicator,
+    LoadingComponent,
   },
 });
 </script>

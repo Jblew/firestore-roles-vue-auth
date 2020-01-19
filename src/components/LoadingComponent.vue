@@ -1,8 +1,5 @@
 <template>
-    <div class="text--secondary caption">
-        <v-progress-circular color="blue" indeterminate></v-progress-circular>
-        &nbsp;&nbsp;{{ text }}...
-    </div>
+  <div class="text--secondary caption">&nbsp;&nbsp;{{ text }}...</div>
 </template>
 
 <script lang="ts">
