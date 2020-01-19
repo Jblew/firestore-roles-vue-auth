@@ -51,7 +51,7 @@
         ]
     },
     "release": {
-        "branch": "release"
+        "branch": "master"
     },
     "repository": {
         "type": "git",

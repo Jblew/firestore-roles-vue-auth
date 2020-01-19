@@ -17,4 +17,4 @@ deploy:
       skip_cleanup: false
       on:
           tags: false
-          branch: release
+          branch: master
