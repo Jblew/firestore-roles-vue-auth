@@ -1,19 +1,19 @@
 <template>
-    <div v-if="hasRole">
-        <slot></slot>
-    </div>
-    <div v-else>
-        <RoleGuardBanComponent
-            :role="role"
-            :loading="loading"
-            :requesting="isRequestingTheRole"
-            :requestLoading="requestState.loading"
-            :requestError="requestState.error"
-            :requestSuccess="requestState.success"
-            @requestRole="requestRole()"
-            @checkRole="checkRole()"
-        />
-    </div>
+  <div v-if="hasRole">
+    <slot></slot>
+  </div>
+  <div v-else>
+    <RoleGuardBanComponent
+      :role="role"
+      :loading="loading"
+      :requesting="isRequestingTheRole"
+      :requestLoading="requestState.loading"
+      :requestError="requestState.error"
+      :requestSuccess="requestState.success"
+      @requestRole="requestRole()"
+      @checkRole="checkRole()"
+    />
+  </div>
 </template>
 
 <script lang="ts">
@@ -47,7 +47,7 @@ export default Vue.extend({
       const role: string = this.role as any;
       return (
         RolesAuthModule.stateOf(this).state === RolesAuthModule.AuthState.AUTHENTICATED
-                && RolesAuthModule.stateOf(this).roles[role] === true
+        && RolesAuthModule.stateOf(this).roles[role] === true
       );
     },
     loading(): boolean {
@@ -88,10 +88,7 @@ export default Vue.extend({
     checkRole() {
       try {
         console.log('Checking role for ', this.account, this.role);
-        RolesAuthModule.Actions.CheckRole.dispatch(
-          this.$store.dispatch,
-                    this.role as string,
-        );
+        RolesAuthModule.Actions.CheckRole.dispatch(this.$store.dispatch, this.role as string);
         this.requestState.success = false;
 
         this.scheduleCheckRole();
@@ -103,9 +100,9 @@ export default Vue.extend({
       try {
         const { roleCheckingIntervalSeconds } = getInjectedRolesAdapter(this).getConfig();
         const timeoutMs = 1000
-                    * (this.hasRole
-                      ? roleCheckingIntervalSeconds.whenHasRole
-                      : roleCheckingIntervalSeconds.whenDoesNotHaveRole);
+          * (this.hasRole
+            ? roleCheckingIntervalSeconds.whenHasRole
+            : roleCheckingIntervalSeconds.whenDoesNotHaveRole);
 
         if (timerHandle) clearTimeout(timerHandle);
         timerHandle = setTimeout(() => this.checkRole(), timeoutMs);
